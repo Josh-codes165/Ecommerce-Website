@@ -1,0 +1,77 @@
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.cart-container1 {
+  margin-top: 40px;
+}
+
+/* .cart-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+} */
+
+.cart-container {
+  display: grid;
+  /* Start with 4 columns, but 1fr makes them flexible */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cart-div {
+  display: flex;
+  flex-direction: column;
+  background: #fff; /* Gives the card a base */
+  border-radius: 12px;
+  overflow: hidden;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+.cart-images {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+.cart-text {
+  padding-left: 25px;
+}
+
+.cart-container h2 {
+  font-weight: bold;
+}
+/* @media (max-width: 1024px) {
+  .cart-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-container {
+    grid-template-columns: 1fr;
+  }
+} */
+
+@media (max-width: 900px) {
+  .cart-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 500px) {
+  .cart-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
