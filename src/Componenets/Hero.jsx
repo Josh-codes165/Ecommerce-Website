@@ -16,7 +16,7 @@ function HeroSection() {
     })
   }, [])
   useGSAP(() => {
-    gsap.fromTo(".btn1", {
+    gsap.fromTo(".btn-login", {
       y: 90,
       opacity: 0
     }, {
@@ -51,7 +51,7 @@ function HeroSection() {
           </p>
         </div>
         <div className="HeroButtons">
-          <button className="btn1">Buy Now</button>
+          <button className="btn-login">Buy Now</button>
           <button className="btn2">Pre Order</button>
         </div>
       </div>
