@@ -47,7 +47,7 @@ export function CartsDiv() {
             <img src={Cart.image} alt={Cart.title} className="cart-images" />
             <h3>{Cart.title}</h3>
             <p>{Cart.price}</p>
-            <button className="btn1">Add to Cart</button>
+            <button className="btn-login">Add to Cart</button>
           </div>
         ))}
       </div>
