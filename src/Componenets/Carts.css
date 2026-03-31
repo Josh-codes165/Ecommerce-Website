@@ -49,17 +49,21 @@ body {
 .cart-container h2 {
   font-weight: bold;
 }
-/* @media (max-width: 1024px) {
-  .cart-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.btn-logins {
+  background-color: #4ade80;
+  color: #0f172a;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-@media (max-width: 600px) {
-  .cart-container {
-    grid-template-columns: 1fr;
-  }
-} */
+.btn-logins:hover {
+  background-color: #3bc771;
+  transform: translateY(-2px);
+}
 
 @media (max-width: 900px) {
   .cart-container {
