@@ -19,82 +19,115 @@ import Cloth8 from "../assets/Cloth8.jpg"
 export const Carts = [
     {
         title : "The Metro Folio",
+        id: 1,
         image : Bag1,
+        quantity: 1,
         price : "₦200,000"
     },
     {
         title : "The Catalyst Backpack",
+        quantity: 1,
         image : Bag2,
+        id: 2,
         price : "₦250,000"
     },
     {
         title : "The Nomad Duffel",
         image : Bag3,
+        quantity: 1,
+        id: 3,
         price : "₦300,000"
     },
     {
         title : "The Horizon Weekender",
+        quantity: 1,
         image : Bag4,
+        id: 4,
+        quantity: 1,
         price : "₦350,000"
     },
     {
         title : "The Luna Crossbody",
         image : Bag5,
+        quantity: 1,
+        id: 5,
         price : "₦400,000"
     },
     {
         title : "The Apex Mini",
+        quantity: 1,
         image : Bag6,
+        id: 6,
         price : "₦450,000"
     },
     {
         title : "The Origin Tote",
         image : Bag7,
+        quantity: 1,
+        id: 7,
         price : "₦500,000"
     },
     {
         title : "The Drift Messenger",
         image : Bag8,
+        quantity: 1,
+        id: 8,
         price : "₦550,000"
     },
     {
         title : "The Gidi Oversized Tee",
         image : Cloth1,
+        quantity: 1,
+        id: 9,
         price : "₦200,000"
     },
     {
         title : "The Mainland Cargoes",
+        quantity: 1,
         image : Cloth2,
+        id: 10,
         price : "₦250,000"
     },
     {
         title : "The Zenith Button-Down",
         image : Cloth3,
-        price : "₦300,000"
+        id: 11,
+        price : "₦300,000",
+        quantity: 1
     },
     {
         title : "The Essential Chinos",
         image : Cloth4,
+        id: 12,
+        quantity: 1,
         price : "₦350,000"
     },
     {
         title : "The Solar Mesh Top",
         image : Cloth5,
+        quantity: 1,
+        id: 13,
         price : "₦400,000"
     },
     {
         title : "The Orbit Two-Piece Set",
+        quantity: 1,
         image : Cloth6,
+        id: 14,
         price : "₦450,000"
     },
     {
         title : "The Heritage Kaftan",
+        quantity: 1,
         image : Cloth7,
+        id: 15,
         price : "₦500,000"
     },
     {
         title : "The Siren Slip Dress",
+        quantity: 1,
         image : Cloth8,
+        id: 16,
         price : "₦550,000"
     },
 ]

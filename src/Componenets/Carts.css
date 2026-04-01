@@ -29,7 +29,7 @@ body {
 .cart-div {
   display: flex;
   flex-direction: column;
-  background: #fff; /* Gives the card a base */
+  background: lightgrey; /* Gives the card a base */
   border-radius: 12px;
   overflow: hidden;
   gap: 10px;
@@ -82,4 +82,8 @@ body {
   .cart-div {
     gap: 15px;
   }
+  /* .btn-logins {
+    width: 150px;
+  } */
 }
+
