@@ -1,4 +1,4 @@
-import Cart from "../assets/Cloth7.jpg";
+import Cart from "../assets/Cloth7.webp";
 import "./Hero.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

@@ -9,8 +9,8 @@ export function CartsDiv() {
   const navigate = useNavigate();
 
   const handleProductClick = (cart) => {
-    viewProduct(cart);           // 1. save product to context
-    navigate("/productDetail");  // 2. then navigate
+    viewProduct(cart); // 1. save product to context
+    navigate("/productDetail"); // 2. then navigate
   };
 
   return (
@@ -33,6 +33,7 @@ export function CartsDiv() {
               <div className="cart-overlay">
                 <span className="cart-overlay-icon">🛒</span>
               </div>
+             
             </div>
 
             <div className="cart-info">

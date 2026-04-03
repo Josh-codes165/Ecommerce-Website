@@ -1,19 +1,19 @@
-import Bag1 from "../assets/Bag1.jpg";
-import Bag2 from "../assets/Bag2.jpg";
-import Bag3 from "../assets/Bag3.jpg";
-import Bag4 from "../assets/Bag4.jpg";
-import Bag5 from "../assets/Bag5.jpg";
-import Bag6 from "../assets/Bag6.jpg";
-import Bag7 from "../assets/Bag7.jpg";
-import Bag8 from "../assets/Bag8.jpg";
-import Cloth1 from "../assets/Cloth1.jpg";
-import Cloth2 from "../assets/Cloth2.jpg";
-import Cloth3 from "../assets/Cloth3.jpg";
-import Cloth4 from "../assets/Cloth4.jpg";
-import Cloth5 from "../assets/Cloth5.jpg";
-import Cloth6 from "../assets/Cloth6.jpg";
-import Cloth7 from "../assets/Cloth7.jpg";
-import Cloth8 from "../assets/Cloth8.jpg";
+import Bag1 from "../assets/Bag1.webp";
+import Bag2 from "../assets/Bag2.webp";
+import Bag3 from "../assets/Bag3.webp";
+import Bag4 from "../assets/Bag4.webp";
+import Bag5 from "../assets/Bag5.webp";
+import Bag6 from "../assets/Bag6.webp";
+import Bag7 from "../assets/Bag7.webp";
+import Bag8 from "../assets/Bag8.webp";
+import Cloth1 from "../assets/Cloth1.webp";
+import Cloth2 from "../assets/Cloth2.webp";
+import Cloth3 from "../assets/Cloth3.webp";
+import Cloth4 from "../assets/Cloth4.webp";
+import Cloth5 from "../assets/Cloth5.webp";
+import Cloth6 from "../assets/Cloth6.webp";
+import Cloth7 from "../assets/Cloth7.webp";
+import Cloth8 from "../assets/Cloth8.webp";
 
 export const Carts = [
   {
