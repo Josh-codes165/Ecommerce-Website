@@ -1,11 +1,58 @@
+// import { Carts } from "./Cart";
+// import "./Carts.css";
+// import { useContext } from "react";
+// import { CartContext } from "../Context/cartContext";
+// import { Link } from "react-router-dom";
+
+// export function CartsDiv() {
+//   const { addToCart, viewProduct } = useContext(CartContext);
+
+//   return (
+//     <div className="cart-container1">
+//       <h3 className="cart-text">Discover what we have now!</h3>
+//       <div className="cart-container">
+//         {Carts.map((Cart, index) => (
+//           <div key={index} className="cart-div">
+//             <Link to="/productDetail" className="cart-image-wrapper">
+//               <img
+//                 src={Cart.image}
+//                 onClick={() => viewProduct(Cart)}
+//                 alt={Cart.title}
+//                 className="cart-images"
+//               />
+//               <div className="cart-overlay">
+//                 <span className="cart-overlay-icon">🛒</span>
+//               </div>
+//             </Link>
+
+//             <div className="cart-info">
+//               <h3 className="cart-title">{Cart.title}</h3>
+//               <p className="cart-price">{Cart.price}</p>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+
+
+
 import { Carts } from "./Cart";
 import "./Carts.css";
 import { useContext } from "react";
 import { CartContext } from "../Context/cartContext";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function CartsDiv() {
-  const { addToCart, viewProduct } = useContext(CartContext);
+  const { viewProduct } = useContext(CartContext);
+  const navigate = useNavigate();
+
+  const handleProductClick = (cart) => {
+    viewProduct(cart);           // 1. save product to context
+    navigate("/productDetail");  // 2. then navigate
+  };
 
   return (
     <div className="cart-container1">
@@ -13,17 +60,20 @@ export function CartsDiv() {
       <div className="cart-container">
         {Carts.map((Cart, index) => (
           <div key={index} className="cart-div">
-            <Link to="/productDetail" className="cart-image-wrapper">
+            {/* No more <Link> wrapper — onClick handles everything */}
+            <div
+              className="cart-image-wrapper"
+              onClick={() => handleProductClick(Cart)}
+            >
               <img
                 src={Cart.image}
-                onClick={() => viewProduct(Cart)}
                 alt={Cart.title}
                 className="cart-images"
               />
               <div className="cart-overlay">
                 <span className="cart-overlay-icon">🛒</span>
               </div>
-            </Link>
+            </div>
 
             <div className="cart-info">
               <h3 className="cart-title">{Cart.title}</h3>
