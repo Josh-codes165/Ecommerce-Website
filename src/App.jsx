@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
-            path="/productDetails"
+            path="/productDetail"
             element={
               <div>{selectedProduct ? <ProductDetail /> : <CartsDiv />}</div>
             }

@@ -13,7 +13,7 @@ export function CartsDiv() {
       <div className="cart-container">
         {Carts.map((Cart, index) => (
           <div key={index} className="cart-div">
-            <Link to="/productDetails" className="cart-image-wrapper">
+            <Link to="/productDetail" className="cart-image-wrapper">
               <img
                 src={Cart.image}
                 onClick={() => viewProduct(Cart)}
