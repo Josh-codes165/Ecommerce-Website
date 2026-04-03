@@ -2,6 +2,8 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+
 }
 
 .HeroContainer {
@@ -30,23 +32,22 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: flex-start; 
+  justify-content: center;
+  align-items: flex-start;
 
-  padding-left: 5%; 
+  padding-left: 5%;
   box-sizing: border-box;
   pointer-events: none;
 }
 
 .HeroTexts,
 .HeroButtons {
-  pointer-events: auto; 
+  pointer-events: auto;
 }
 
 .HeroTexts h1 {
   margin: 0;
   font-size: clamp(2.5rem, 8vw, 4rem); /* Shrinks on mobile, grows on desktop */
-  font-family: "Inter", sans-serif;
   color: white;
   line-height: 1.1;
 }
@@ -79,5 +80,4 @@
   transform: translateY(-2px);
   filter: brightness(1.1);
 }
-
 

@@ -7,18 +7,15 @@ body {
   margin-top: 40px;
 }
 
-/* .cart-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2.5rem;
-  padding: 20px;
-  font-family: "Inter", sans-serif;
-  box-sizing: border-box;
-} */
+.cart-text {
+  padding-left: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
 
 .cart-container {
   display: grid;
-  /* Start with 4 columns, but 1fr makes them flexible */
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 20px;
@@ -29,42 +26,95 @@ body {
 .cart-div {
   display: flex;
   flex-direction: column;
-  background: lightgrey; /* Gives the card a base */
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  gap: 10px;
-  transition: transform 0.3s ease;
+  border: 1px solid #e8e8e8;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
+
+.cart-div:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+  transform: translateY(-3px);
+}
+
+/* Image wrapper — needed for the overlay to sit on top */
+.cart-image-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
 .cart-images {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
-  border-radius: 8px;
-}
-.cart-text {
-  padding-left: 25px;
+  transition: transform 0.35s ease;
 }
 
-.cart-container h2 {
-  font-weight: bold;
+/* Scale on hover */
+.cart-image-wrapper:hover .cart-images {
+  transform: scale(1.07);
 }
-.btn-logins {
-  background-color: #4ade80;
-  color: #0f172a;
-  padding: 20px 40px;
-  border: none;
-  border-radius: 6px;
+
+/* Dark overlay that fades in */
+.cart-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px 12px 0 0;
+}
+
+.cart-image-wrapper:hover .cart-overlay {
+  opacity: 1;
+}
+
+.cart-overlay-icon {
+  font-size: 36px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.cart-image-wrapper:hover .cart-overlay-icon {
+  transform: scale(1);
+}
+
+/* Product info below the image */
+.cart-info {
+  padding: 12px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cart-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cart-price {
+  font-size: 16px;
   font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  color: #4ade80;
+  margin: 0;
 }
 
-.btn-logins:hover {
-  background-color: #3bc771;
-  transform: translateY(-2px);
-}
-
+/* Tablet: 2 columns */
 @media (max-width: 900px) {
   .cart-container {
     grid-template-columns: repeat(2, 1fr);
@@ -73,17 +123,23 @@ body {
   }
 }
 
-/* Mobile: 1 column */
+/* Mobile: 2 small columns (like Jumia mobile) */
 @media (max-width: 500px) {
   .cart-container {
-    grid-template-columns: 1fr;
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 12px;
   }
-  .cart-div {
-    gap: 15px;
-  }
-  /* .btn-logins {
-    width: 150px;
-  } */
-}
 
+  .cart-info {
+    padding: 8px 10px 12px;
+  }
+
+  .cart-title {
+    font-size: 12px;
+  }
+
+  .cart-price {
+    font-size: 14px;
+  }
+}

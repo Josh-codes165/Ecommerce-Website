@@ -1,23 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-import Home from './Pages/Home'
-import HeroSection from './Componenets/Hero'
-import { CartsDiv } from './Componenets/Carts'
+import { useContext, useState } from "react";
+import "./App.css";
+import Home from "./Pages/Home";
+import HeroSection from "./Componenets/Hero";
+import { CartsDiv } from "./Componenets/Carts";
+import { CartContext } from "./Context/cartContext";
+import ProductDetail from "./Componenets/ProductDetail";
+import { Route, Routes } from "react-router-dom";
+
 function App() {
-  const [count, setCount] = useState(0)
+  const { selectedProduct } = useContext(CartContext);
 
   return (
     <>
-      <div className='CTA'>
-        <HeroSection/>
-        <Home/>
-        <CartsDiv/>
+      <div className="CTA">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/productDetails"
+            element={
+              <div>{selectedProduct ? <ProductDetail /> : <CartsDiv />}</div>
+            }
+          />
+        </Routes>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
