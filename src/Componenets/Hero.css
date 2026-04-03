@@ -81,3 +81,9 @@
   filter: brightness(1.1);
 }
 
+@media (max-width: 500px) {
+  .HeroTexts p {
+  font-size: 1rem;
+  max-width: 500px; /* Prevents text from stretching across the whole screen */
+}
+}
