@@ -53,7 +53,7 @@ export const Carts = [
       "Generous in size, refined in form. Wide zip opening, secure side pockets, and a sturdy build that holds its shape beautifully. The classic colorway pairs with everything. Your go-to bag for every getaway.",
   },
   {
-    title: "The Luna Crossbody",
+    title: "The Luna Crossboady",
     image: Bag5,
     quantity: 1,
     id: 5,
