@@ -78,4 +78,8 @@
   gap: 40px;
   
 }
+
+.modal input {
+  padding: 15px 20px;
+}
 }
