@@ -41,6 +41,11 @@
     transform 0.2s;
 }
 
+.modal input:focus {
+    outline: none;
+    border:  1px solid #4ade80;
+}
+
 .modal button {
   width: 100px;
   padding: 10px 10px;
