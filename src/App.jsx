@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Spinner from "./Componenets/Spinner";
 import NavBar from "./Componenets/NavBar";
 const LoginModal = React.lazy(() => import("./Componenets/LoginModal"))
+import Footer from "./Componenets/Footer";
 
 function App() {
   const { selectedProduct } = useContext(CartContext);
@@ -24,6 +25,7 @@ function App() {
                 <NavBar />
 
                 <Home />
+                <Footer/>
               </Suspense>
             }
           />

@@ -29,7 +29,7 @@ function ProductDetail() {
   return (
     <div className="detail-page">
       <button className="btn-back" onClick={() => navigate(-1)}>
-        ← Back to Products
+        ← 
       </button>
 
       <div className="detail-layout">
