@@ -43,9 +43,9 @@ function NavBar() {
             </a>
           </li>
           <li className="mobile-only">
-            <button className="btn-login">
-              Login
-            </button>
+            <Link to="LoginModal">
+              <button className="btn-login">Login</button>
+            </Link>
           </li>
         </ul>
 
@@ -101,8 +101,6 @@ function NavBar() {
               Login
             </button>
           </Link>
-
-        
 
           {/* Hamburger */}
           <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
