@@ -92,7 +92,6 @@
   width: 90%;
   display: flex;
 
-  gap: 30px;
   
 }
 
@@ -101,7 +100,7 @@
 }
 
 .modal button {
-  width: 100px;
+  width: 100%;
   padding: 15px 10px;
  
 }
