@@ -1,8 +1,14 @@
 import { useEffect } from 'react';
 import './LoginModal.css'
 import Shopify from "../assets/Shopify.png"
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginModal({isOpen, onClose}) {
+    const navigate = useNavigate()
+
+    const handleNavigate =  () => {
+        navigate(-1)
+    }
     // useEffect(() => {
     //     const handleKey = (e) => {
     //         if(e.key === "Escape") onClose();
@@ -19,7 +25,7 @@ export default function LoginModal({isOpen, onClose}) {
                 <h2>Welcome to Shopify</h2>
                 <p>Use your email or phone to log in or sign up.</p>
                 <input type="email" placeholder="Email or Mobile Number*" />
-                <button>Submit</button>
+                <button onClick={handleNavigate}>Submit</button>
             </div>
         </div>
     )
