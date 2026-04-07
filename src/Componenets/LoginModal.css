@@ -38,6 +38,7 @@
   text-align: center;
   color: rgba(0, 0, 0, 0.688);
   margin-bottom: 40px;
+  font-size: 14px;
 }
 .modal input {
   padding: 15px 20px;
@@ -94,6 +95,7 @@
 
   
 }
+
 
 .modal input {
   padding: 15px 20px;
