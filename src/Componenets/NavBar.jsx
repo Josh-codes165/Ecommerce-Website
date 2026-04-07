@@ -3,10 +3,11 @@ import { CartContext } from "../Context/cartContext";
 import "../Componenets/NavBar.css";
 import { useLocation } from "react-router-dom";
 import LoginModal from "./LoginModal";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [openButton, setIsOpenButton] = useState(false)
+  const [openButton, setIsOpenButton] = useState(false);
   const { cart } = useContext(CartContext);
   const location = useLocation();
 
@@ -42,7 +43,9 @@ function NavBar() {
             </a>
           </li>
           <li className="mobile-only">
-            <button className="btn-login" onClick={() => setIsOpenButton(true)} >Login</button>
+            <button className="btn-login">
+              Login
+            </button>
           </li>
         </ul>
 
@@ -90,10 +93,16 @@ function NavBar() {
             {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
           </div>
 
-          <button className="btn-login desktop-only" onClick={() => setIsOpenButton(true)}>Login</button>
+          <Link to="LoginModal">
+            <button
+              className="btn-login desktop-only"
+              // onClick={() => setIsOpenButton(true)}
+            >
+              Login
+            </button>
+          </Link>
 
-          <LoginModal isOpen={openButton}
-          onClose={() => setIsOpenButton(false)}/>
+        
 
           {/* Hamburger */}
           <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>

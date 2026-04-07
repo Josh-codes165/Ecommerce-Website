@@ -19,7 +19,6 @@ export function CartsDiv() {
       <div className="cart-container">
         {Carts.map((Cart, index) => (
           <div key={index} className="cart-div">
-            {/* No more <Link> wrapper — onClick handles everything */}
             <div
               className="cart-image-wrapper"
               onClick={() => handleProductClick(Cart)}

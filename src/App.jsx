@@ -7,20 +7,22 @@ import { CartContext } from "./Context/cartContext";
 import ProductDetail from "./Componenets/ProductDetail";
 import { Route, Routes } from "react-router-dom";
 import Spinner from "./Componenets/Spinner";
-import NavBar from "./Componenets/NavBar"
+import NavBar from "./Componenets/NavBar";
+const LoginModal = React.lazy(() => import("./Componenets/LoginModal"))
+
 function App() {
   const { selectedProduct } = useContext(CartContext);
 
   return (
     <>
       <div className="CTA">
-        <NavBar />
-
         <Routes>
           <Route
             path="/"
             element={
               <Suspense fallback={<Spinner />}>
+                <NavBar />
+
                 <Home />
               </Suspense>
             }
@@ -28,9 +30,12 @@ function App() {
           <Route
             path="/productDetail"
             element={
-              <div>{selectedProduct ? <ProductDetail /> : <CartsDiv />}</div>
+              <div>
+                <NavBar /> {selectedProduct ? <ProductDetail /> : <CartsDiv />}
+              </div>
             }
           />
+          <Route path="/LoginModal" element={<LoginModal />} />
         </Routes>
       </div>
     </>
